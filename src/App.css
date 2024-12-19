@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+:root{
+  --radius: 4px;
+}
+.main-section{
+  background-color: #dadada;
+  max-width: 144rem;
+  height: auto;
+  margin:  auto; 
+  padding: 0 1.6rem; 
+  box-sizing: border-box; 
+}
+.grid{
+  display: grid;
+  padding: 2.4rem;
+  grid-template-columns: repeat(3,1fr);
+  gap: 4.8rem;
+}
+p,label{
+  font-size: 1.8rem;
+}
+
+form{
+  width: 50%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & button{
+    width: 50%;
+
+  }
+  & input{
+    width: 50%;
+    height: 60px;
+    margin-top: 1.6rem;
+    font-size: 1.8rem;
+    padding: 0 0.8rem;
+  }
+  & textarea{
+    width: 50%;
+    height: 100px;
+    margin: 1.6rem;
+    font-size: 1.8rem;
+    resize: none;
+    padding: 0 0.8rem;
+  }
+}
+
+
+@media (max-width:768px){
+  .main-section{
+    width: 100%;
+
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  form{
+    width: 100%;
+    padding: 2.4rem;
+    & input , & textarea{
+      width: 100%;
+      font-size: 1.6rem;
+    }
+  }
+}
